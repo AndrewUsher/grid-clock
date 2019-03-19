@@ -1,12 +1,10 @@
 const { app, BrowserWindow } = require('electron')
-const { resolve } = require('path')
-const { cwd } = require('process')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let window
 
-function createWindow() {
+function createWindow () {
   window = new BrowserWindow({ fullscreen: true })
   window.loadURL('http://localhost:1234')
   window.on('closed', () => {
