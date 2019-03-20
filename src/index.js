@@ -1,12 +1,24 @@
 const { app, BrowserWindow } = require('electron')
+const { join } = require('path')
+
+const IS_DEV = process.env.NODE_ENV !== 'production'
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let window
 
 function createWindow () {
-  window = new BrowserWindow({ fullscreen: true })
-  window.loadURL('http://localhost:1234')
+  window = new BrowserWindow({
+    fullscreen: true,
+    webPreferences: {
+      nodeIntegration: false
+    }
+  })
+  window.loadURL(
+    IS_DEV ? 'http://localhost:1234' : join(__dirname, 'index.html')
+  )
+  window.webContents.openDevTools()
+
   window.on('closed', () => {
     window = null
   })
