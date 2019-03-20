@@ -5,7 +5,11 @@ import {
   setSuffixElOn,
   setMinutes
 } from './setTime'
+
 function updateClock () {
+  // 'Turn off' all clock elements
+  clearClock()
+
   const date = new Date()
   let hour = date.getHours()
   const minutes = date.getMinutes()
@@ -17,9 +21,6 @@ function updateClock () {
   if (parseInt(hour, 10) === 0) {
     hour = 12
   }
-
-  // 'Turn off' all clock elements
-  clearClock()
 
   // One minute past [hour]
   if (parseInt(minutes, 10) === 1) {
