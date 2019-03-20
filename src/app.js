@@ -5,15 +5,13 @@ import { updateClock } from './updateClock'
 
 const THEME_SELECTOR = $('select')
 
-THEME_SELECTOR.addEventListener('change', e => {
-  setTheme(e.target.value)
-})
+THEME_SELECTOR.addEventListener(
+  'change',
+  ({ target: { value: selectedTheme } }) => {
+    setTheme(selectedTheme)
+  }
+)
 
-/** Main / Update Clock
------------------------------------------------------------------------------ */
-
-/** Tick / init
------------------------------------------------------------------------------ */
 setInterval(updateClock, 1000)
 populateThemeSelector()
 updateClock()
