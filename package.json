@@ -7,13 +7,17 @@
   "license": "MIT",
   "scripts": {
     "dev": "concurrently -n electron/parcel \" electron .\" \"yarn parcel src/index.html\"",
-    "lint": "eslint --fix ./src"
+    "parcel:build": "parcel build src/index.html --out-dir parcel-output --public-url ./",
+    "package": "NODE_ENV=production yarn parcel:build && electron-builder",
+    "prepackage": "rm -rf app-build parcel-output",
+    "lint": "eslint --fix ./src",
+    "postinstall": "electron-builder install-app-deps"
   },
-  "dependencies": {
-    "electron": "^4.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "concurrently": "^4.1.0",
+    "electron": "^4.1.0",
+    "electron-builder": "^20.39.0",
     "eslint": "^5.15.3",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
@@ -21,5 +25,17 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "parcel-bundler": "^1.12.2"
+  },
+  "build": {
+    "appId": "com.drewster.grid-clock",
+    "productName": "Grid Clock",
+    "directories": {
+      "output": "app-build"
+    },
+    "files": [
+      "src/index.js",
+      "src/electron/getPageURL.js",
+      "parcel-output/*"
+    ]
   }
 }
