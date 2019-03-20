@@ -28,6 +28,7 @@ body {
   /* font-family: '-apple-system'; */
   font-family: var(--clock-font);
   text-transform: uppercase;
+  transition: background-color 600ms;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -49,6 +50,7 @@ glyph {
   color: var(--clock-inactive-color);
   transition: color 400ms ease-in-out;
 }
+
 @media screen and (min-height: 1200px) and (max-width: 1200px) {
   glyph {
     font-size: 1.6vh;

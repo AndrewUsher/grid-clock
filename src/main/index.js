@@ -1,23 +1,26 @@
+import { format as formatUrl } from 'url'
 const { app, BrowserWindow } = require('electron')
 const { join } = require('path')
 
-const IS_DEV = process.env.NODE_ENV !== 'production'
+const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let window
 
 function createWindow () {
-  window = new BrowserWindow({
-    fullscreen: true,
-    webPreferences: {
-      nodeIntegration: false
-    }
-  })
-  window.loadURL(
-    IS_DEV ? 'http://localhost:1234' : join(__dirname, 'index.html')
-  )
-  window.webContents.openDevTools()
+  window = new BrowserWindow()
+  if (isDevelopment) {
+    window.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`)
+  } else {
+    window.loadURL(
+      formatUrl({
+        pathname: join(__dirname, 'index.html'),
+        protocol: 'file',
+        slashes: true
+      })
+    )
+  }
 
   window.on('closed', () => {
     window = null

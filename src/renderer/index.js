@@ -2,6 +2,7 @@ import { $ } from './utils'
 import { setTheme } from './setTheme'
 import { populateThemeSelector } from './populateThemeSelector'
 import { updateClock } from './updateClock'
+import './index.css'
 
 const THEME_SELECTOR = $('select')
 
