@@ -34,5 +34,11 @@ export default {
     clockInactiveColor: '#FFC8EF',
     clockActiveColor: '#FAFF7F',
     clockFont: 'Pacifico'
+  },
+  sunshine: {
+    clockBgColor: '#621295',
+    clockInactiveColor: '#dadddf',
+    clockActiveColor: '#f69314',
+    clockFont: 'Pacifico'
   }
 }
