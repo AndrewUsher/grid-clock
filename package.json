@@ -10,8 +10,7 @@
     "dev": "electron-webpack dev",
     "build": "electron-webpack && electron-builder",
     "prebuild": "rm -rf dist",
-    "lint": "eslint --fix ./src",
-    "postinstall": "electron-builder install-app-deps"
+    "lint": "eslint --fix ./src"
   },
   "dependencies": {
     "source-map-support": "^0.5.11"
