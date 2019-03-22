@@ -16,4 +16,3 @@ THEME_SELECTOR.addEventListener(
 setInterval(updateClock, 1000)
 populateThemeSelector()
 updateClock()
-setTheme('kately')
