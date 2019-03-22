@@ -1,6 +1,5 @@
 import themes from './themes'
-
-const ROOT = document.documentElement
+import { ROOT } from './constants'
 
 const setTheme = themeName => {
   const {
