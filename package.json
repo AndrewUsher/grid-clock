@@ -20,7 +20,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "babel-loader": "^8.0.5",
     "concurrently": "^4.1.0",
-    "electron": "^4.1.4",
+    "electron": "^6.0.1",
     "electron-builder": "^20.39.0",
     "electron-webpack": "^2.6.2",
     "eslint": "^5.16.0",
