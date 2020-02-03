@@ -11,6 +11,12 @@ export default {
     clockActiveColor: '#f2c0ff',
     clockFont: 'Inconsolata'
   },
+  red: {
+    clockBgColor: 'red',
+    clockInactiveColor: 'black',
+    clockActiveColor: 'white',
+    clockFont: 'Inconsolata'
+  },
   unicorn: {
     clockBgColor: '#000',
     clockInactiveColor: '#a287f4',
