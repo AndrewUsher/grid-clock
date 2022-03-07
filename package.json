@@ -24,7 +24,7 @@
     "babel-loader": "8.1.0",
     "cz-conventional-changelog": "3.3.0",
     "electron": "4.1.4",
-    "electron-builder": "21.2.0",
+    "electron-builder": "22.14.13",
     "electron-webpack": "2.8.2",
     "eslint": "7.11.0",
     "html-webpack-plugin": "4.5.0",
