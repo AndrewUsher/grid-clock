@@ -17,9 +17,9 @@
     "source-map-support": "^0.5.15"
   },
   "devDependencies": {
-    "@babel/core": "7.12.3",
+    "@babel/core": "7.25.9",
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
-    "@babel/preset-env": "7.12.1",
+    "@babel/preset-env": "7.25.9",
     "@drewster/eslint-config": "3.0.0",
     "babel-loader": "8.1.0",
     "cz-conventional-changelog": "3.3.0",
